@@ -16,22 +16,22 @@ let proxies = await produceArtifact({
 config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
-  if (['all', 'all-auto'].includes(i.tag)) {
+  if (['🐸 手动选择', '♻️ 自动选择'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies))
   }
-  if (['hk', 'hk-auto'].includes(i.tag)) {
+  if (['🇭🇰 香港手动', '🇭🇰 香港自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /港|hk|hongkong|hong kong|🇭🇰/i))
   }
-  if (['tw', 'tw-auto'].includes(i.tag)) {
+  if (['🇨🇳 台湾手动', '🇨🇳 台湾自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /台|tw|taiwan|🇹🇼/i))
   }
-  if (['jp', 'jp-auto'].includes(i.tag)) {
+  if (['🇯🇵 日本手动', '🇯🇵 日本自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /日本|jp|japan|🇯🇵/i))
   }
-  if (['sg', 'sg-auto'].includes(i.tag)) {
+  if (['🇸🇬 狮城手动', '🇸🇬 狮城自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /^(?!.*(?:us)).*(新|sg|singapore|🇸🇬)/i))
   }
-  if (['us', 'us-auto'].includes(i.tag)) {
+  if (['🇺🇲 美国手动', '🇺🇲 美国自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /美|us|unitedstates|united states|🇺🇸/i))
   }
 })
