@@ -15,6 +15,14 @@ let proxies = await produceArtifact({
 
 config.outbounds.push(...proxies)
 
+// 清理 filter 字段和 {all} 占位符（兼容旧模板）
+config.outbounds.forEach(i => {
+  delete i.filter
+  if (Array.isArray(i.outbounds)) {
+    i.outbounds = i.outbounds.filter(t => t !== '{all}')
+  }
+})
+
 config.outbounds.map(i => {
   if (['🐸 手动选择'].includes(i.tag)) {
     i.outbounds.push(
