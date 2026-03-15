@@ -120,7 +120,8 @@
         "outbound": "🎯 全球直连"
       },
       {
-        "port": 3478,
+        "port_range": ["3478:3497", "16384:16387", "16393:16402"],
+        "network": "udp",
         "action": "route",
         "outbound": "🎯 全球直连"
       },

@@ -109,7 +109,18 @@
         "action": "reject"
       },
       {
-        "port": 3478,
+        "protocol": "bittorrent",
+        "action": "route",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "network": "icmp",
+        "action": "route",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "port_range": ["3478:3497", "16384:16387", "16393:16402"],
+        "network": "udp",
         "action": "route",
         "outbound": "🎯 全球直连"
       },
