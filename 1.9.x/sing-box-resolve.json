@@ -17,6 +17,11 @@
         "detour": "direct"
       },
       {
+        "tag": "cloudflare",
+        "address": "1.1.1.1",
+        "detour": "direct"
+      },
+      {
         "tag": "fakeip",
         "address": "fakeip"
       }
@@ -34,6 +39,10 @@
       {
         "clash_mode": "Global",
         "server": "fakeip"
+      },
+      {
+        "domain_suffix": "tv.apple.com",
+        "server": "cloudflare"
       },
       {
         "inbound": "tun",
