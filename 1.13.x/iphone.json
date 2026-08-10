@@ -20,6 +20,11 @@
         "domain_resolver": "local"
       },
       {
+        "tag": "cloudflare",
+        "type": "udp",
+        "server": "1.1.1.1"
+      },
+      {
         "tag": "fakeip",
         "type": "fakeip",
         "inet4_range": "198.18.0.0/15",
@@ -36,6 +41,11 @@
         "rule_set": "ads_domain",
         "action": "reject",
         "method": "default"
+      },
+      {
+        "domain_suffix": "tv.apple.com",
+        "action": "route",
+        "server": "cloudflare"
       },
       {
         "rule_set": "cn_domain",
