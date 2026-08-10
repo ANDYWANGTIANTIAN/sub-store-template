@@ -129,7 +129,11 @@
         "outbound": "🎯 全球直连"
       },
       {
-        "port_range": ["3478:3497", "16384:16387", "16393:16402"],
+        "port_range": [
+          "3478:3497",
+          "16384:16387",
+          "16393:16402"
+        ],
         "network": "udp",
         "action": "route",
         "outbound": "🎯 全球直连"
@@ -226,11 +230,6 @@
         "rule_set": "geoip-google",
         "action": "route",
         "outbound": "🍀 Google"
-      },
-      {
-        "rule_set": "geoip-apple",
-        "action": "route",
-        "outbound": "🍏 Apple"
       },
       {
         "rule_set": "geoip-telegram",
@@ -359,13 +358,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geoip/google.srs",
-        "download_detour": "🎯 全球直连"
-      },
-      {
-        "tag": "geoip-apple",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geoip/apple.srs",
         "download_detour": "🎯 全球直连"
       },
       {

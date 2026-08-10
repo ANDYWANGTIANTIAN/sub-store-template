@@ -130,7 +130,11 @@
         "outbound": "🎯 全球直连"
       },
       {
-        "port_range": ["3478:3497", "16384:16387", "16393:16402"],
+        "port_range": [
+          "3478:3497",
+          "16384:16387",
+          "16393:16402"
+        ],
         "network": "udp",
         "action": "route",
         "outbound": "🎯 全球直连"
@@ -247,10 +251,7 @@
         "outbound": "🍀 Google"
       },
       {
-        "rule_set": [
-          "apple_ip",
-          "apple_domain"
-        ],
+        "rule_set": "apple_domain",
         "action": "route",
         "outbound": "🍏 Apple"
       },
@@ -272,13 +273,6 @@
       }
     ],
     "rule_set": [
-      {
-        "tag": "apple_ip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/apple.srs",
-        "download_detour": "🎯 全球直连"
-      },
       {
         "tag": "apple_domain",
         "type": "remote",
