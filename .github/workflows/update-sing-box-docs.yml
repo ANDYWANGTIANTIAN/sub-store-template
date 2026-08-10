@@ -1,0 +1,32 @@
+name: Update sing-box documentation
+
+on:
+  schedule:
+    - cron: "23 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-sing-box-documentation
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update documentation snapshot
+        run: ./scripts/update-sing-box-docs.sh
+      - name: Commit changes
+        run: |
+          if [[ -z "$(git status --porcelain -- docs/sing-box)" ]]; then
+            echo "Documentation is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/sing-box
+          git commit -m "docs: update sing-box documentation"
+          git push
