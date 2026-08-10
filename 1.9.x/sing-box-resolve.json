@@ -110,10 +110,7 @@
         "outbound": "google"
       },
       {
-        "rule_set": [
-          "geoip-apple",
-          "geosite-apple"
-        ],
+        "rule_set": "geosite-apple",
         "outbound": "apple"
       },
       {
@@ -143,13 +140,6 @@
       }
     ],
     "rule_set": [
-      {
-        "tag": "geoip-apple",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geoip/apple.srs",
-        "download_detour": "direct"
-      },
       {
         "tag": "geosite-apple",
         "type": "remote",
