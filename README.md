@@ -7,7 +7,7 @@
 
 ## 根目录模板
 
-根目录的 `sing-box.js`、`sing-box.json`、`iphone.js` 和 `iphone.json` 是当前最高版本（目前为 `1.13.x`）目录中同名模板的副本，方便通过 jsDelivr 的固定根路径引用。例如：
+根目录的 `sing-box.js`、`sing-box.json`、`iphone.js` 和 `iphone.json` 是当前最高版本（目前为 `1.14.x`）目录中同名模板的副本，方便通过 jsDelivr 的固定根路径引用。例如：
 
 ```text
 https://cdn.jsdelivr.net/gh/ANDYWANGTIANTIAN/sub-store-template@main/sing-box.json
@@ -19,4 +19,5 @@ https://cdn.jsdelivr.net/gh/ANDYWANGTIANTIAN/sub-store-template@main/iphone.json
 
 ## 版本说明
 
+* [sing-box 1.14 模板说明](1.14.x/README.md)
 * [sing-box 1.13 模板与路由设计](1.13.x/README.md)
