@@ -108,14 +108,14 @@
         "outbound": "🎯 全球直连"
       },
       {
-        "clash_mode": "Direct",
-        "action": "route",
-        "outbound": "🎯 全球直连"
-      },
-      {
         "clash_mode": "Global",
         "action": "route",
         "outbound": "GLOBAL"
+      },
+      {
+        "clash_mode": "Direct",
+        "action": "route",
+        "outbound": "🎯 全球直连"
       },
       {
         "rule_set": "ads_domain",
@@ -125,12 +125,12 @@
       {
         "rule_set": "bilibili_domain",
         "action": "route",
-        "outbound": "🎯 全球直连"
+        "outbound": "📺 Bilibili"
       },
       {
         "rule_set": "bahamut_domain",
         "action": "route",
-        "outbound": "🚀 默认代理"
+        "outbound": "🎭 Bahamut"
       },
       {
         "rule_set": "youtube_domain",
@@ -210,7 +210,7 @@
       {
         "rule_set": "cn_domain",
         "action": "route",
-        "outbound": "🎯 全球直连"
+        "outbound": "🇨🇳 国内"
       },
       {
         "action": "resolve"
@@ -233,7 +233,7 @@
       {
         "rule_set": "cn_ip",
         "action": "route",
-        "outbound": "🎯 全球直连"
+        "outbound": "🇨🇳 国内"
       }
     ],
     "rule_set": [
@@ -409,149 +409,364 @@
       "type": "selector",
       "outbounds": [
         "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
         "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
         "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
         "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "🧠 AI",
-      "type": "selector",
-      "outbounds": [
-        "🇯🇵 日本手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动"
-      ]
-    },
-    {
-      "tag": "📹 YouTube",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 香港手动",
-        "🇯🇵 日本手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择",
+        "🎯 全球直连"
+      ],
+      "default": "♻️ 自动选择"
     },
     {
       "tag": "🍀 Google",
       "type": "selector",
       "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
         "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
         "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
         "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
         "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "👨‍💻 Github",
-      "type": "selector",
-      "outbounds": [
-        "🇯🇵 日本手动",
-        "🇭🇰 香港手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "📲 Telegram",
-      "type": "selector",
-      "outbounds": [
-        "🇸🇬 狮城手动",
-        "🇭🇰 香港手动",
-        "🇯🇵 日本手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "🎵 TikTok",
-      "type": "selector",
-      "outbounds": [
-        "🇯🇵 日本手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "🎥 Netflix",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 香港手动",
-        "🇯🇵 日本手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "💶 PayPal",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 香港手动",
-        "🇯🇵 日本手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "🎮 Steam",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 香港手动",
-        "🇯🇵 日本手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "🪟 Microsoft",
-      "type": "selector",
-      "outbounds": [
-        "🇯🇵 日本手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
-    },
-    {
-      "tag": "🐬 OneDrive",
-      "type": "selector",
-      "outbounds": [
-        "🇯🇵 日本手动",
-        "🇸🇬 狮城手动",
-        "🇺🇲 美国手动",
-        "🐸 手动选择"
-      ]
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
     },
     {
       "tag": "🍏 Apple",
       "type": "selector",
       "outbounds": [
+        "🚀 默认代理",
         "🎯 全球直连",
         "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
         "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
         "🇸🇬 狮城手动",
-        "🇺🇲 美国手动"
-      ]
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🎯 全球直连"
+    },
+    {
+      "tag": "📲 Telegram",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "📺 Bilibili",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🎯 全球直连"
+    },
+    {
+      "tag": "🎥 Netflix",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "🎭 Bahamut",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "📹 YouTube",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "🧠 AI",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "👨‍💻 Github",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "🎵 TikTok",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "💶 PayPal",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "🎮 Steam",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "🪟 Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "🐬 OneDrive",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
+    },
+    {
+      "tag": "🇨🇳 国内",
+      "type": "selector",
+      "outbounds": [
+        "🚀 默认代理",
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🎯 全球直连"
     },
     {
       "tag": "🐠 漏网之鱼",
       "type": "selector",
       "outbounds": [
         "🚀 默认代理",
-        "🎯 全球直连"
-      ]
+        "🎯 全球直连",
+        "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
+        "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
+        "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
+        "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
+        "🐸 手动选择",
+        "♻️ 自动选择"
+      ],
+      "default": "🚀 默认代理"
     },
     {
       "tag": "🇭🇰 香港手动",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇨🇳 台湾手动",
       "type": "selector",
       "outbounds": []
     },
@@ -576,30 +791,87 @@
       "outbounds": []
     },
     {
+      "tag": "🇭🇰 香港自动",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇨🇳 台湾自动",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇯🇵 日本自动",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇸🇬 狮城自动",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇺🇲 美国自动",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "♻️ 自动选择",
+      "type": "urltest",
+      "outbounds": [],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
       "tag": "GLOBAL",
       "type": "selector",
       "outbounds": [
+        "🎯 全球直连",
         "🚀 默认代理",
-        "🧠 AI",
-        "📹 YouTube",
         "🍀 Google",
-        "👨‍💻 Github",
+        "🍏 Apple",
         "📲 Telegram",
-        "🎵 TikTok",
+        "📺 Bilibili",
         "🎥 Netflix",
+        "🎭 Bahamut",
+        "📹 YouTube",
+        "🧠 AI",
+        "👨‍💻 Github",
+        "🎵 TikTok",
         "💶 PayPal",
         "🎮 Steam",
         "🪟 Microsoft",
         "🐬 OneDrive",
-        "🍏 Apple",
-        "🐠 漏网之鱼",
         "🇭🇰 香港手动",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾手动",
+        "🇨🇳 台湾自动",
         "🇯🇵 日本手动",
+        "🇯🇵 日本自动",
         "🇸🇬 狮城手动",
+        "🇸🇬 狮城自动",
         "🇺🇲 美国手动",
+        "🇺🇲 美国自动",
         "🐸 手动选择",
-        "🎯 全球直连"
-      ]
+        "♻️ 自动选择"
+      ],
+      "default": "🎯 全球直连"
     },
     {
       "tag": "🎯 全球直连",
@@ -639,7 +911,10 @@
   ],
   "experimental": {
     "clash_api": {
-      "external_controller": "127.0.0.1:9090"
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+      "external_ui_download_detour": "🎯 全球直连"
     },
     "cache_file": {
       "enabled": true,
@@ -647,7 +922,9 @@
     }
   },
   "log": {
-    "disabled": true
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
   },
   "http_clients": [
     {
